@@ -1,6 +1,6 @@
-export default function BeerCard({ name, image, avgRating}) {
+export default function BeerCard({ name, image, avgRating, setSelectedBeer}) {
     return (
-        <div className="beer-card">
+        <div className="beer-card" onClick={() => setSelectedBeer(name)}>
             <div className="beer-image">
                 <img src={image} alt={name} 
                 onError={(e) => {
